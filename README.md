@@ -9,7 +9,15 @@ Neste cenário a soluçao do cliente tem dois componentes on-premises: uma máqu
 ### Database server
   
 Assumindo que possa ser um servidor SQL e que armazena ids dos utilizadores anónimos e as respostas ao questionário. Pode surgir o problema de ao fim de milhões de inserções, o armazenamento da máquina acabar com um espaço reduzido ou nenhum, e por sua vez o workload intenso causar problemas de disponibilidade. A solução será migrar para _Azure SQL Database_. O serviço oferece capacidades de PaaS, alta disponibilidade e desempenho, e os recursos podem ser alterados dinâmicamente conforme necessidade sem downtime como mencionado [aqui](https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview?view=azuresql#scalable-performance-and-pools) e [aqui](https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview?view=azuresql#scalable-performance-and-pools).  
+
+### Assessment  
   
-### Database server to _Azure SQL Database_    
-  
-Tomando as devidas considerações: o modelo de deployment será a _single database_; o purchasing model será _vCore model_ que permite a opcção de _Azure Hybrid Benefit_ em que ajuda a cobrir os custos das licenças; o service tier será _Business Critical/Premium service tier_ indicado para a situação em questão.
+Precisamos de saber se existe algum blocker de migração ou problemas de compatibilidade. Para isso usamos a ferramenta nativa _Azure SQL migration extension for Azure Data Studio_. Com esta ferramenta conseguimos entender a prontidão da base de dados a migrar, e recomendações das configurações para a _Azure SQL Database_.
+
+### _Azure SQL Database_ 
+
+(no caso de não seguir as recomendações automáticas do assessment feito) Tomando as considerações necessárias: o modelo de deployment será a _single database_; o purchasing model será _vCore model_ que permite a opcção de _Azure Hybrid Benefit_ em que ajuda a cobrir os custos das licenças; o service tier será _Business Critical/Premium_ indicado para a situação em questão.  
+
+
+
+
