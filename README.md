@@ -12,4 +12,4 @@ Assumindo que possa ser um servidor SQL e que armazena ids dos utilizadores anó
   
 ### Database server to _Azure SQL Database_    
   
-As considerações 
+Tomando as devidas considerações: o modelo de deployment será a _single database_; o purchasing model será _vCore model_ que permite a opcção de _Azure Hybrid Benefit_ em que ajuda a cobrir os custos das licenças; o service tier será _Business Critical/Premium service tier_ indicado para a situação em questão.
