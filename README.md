@@ -28,6 +28,9 @@ Para a kubernets funcionar como intencionado é necessário estar sobre a mesma 
   
 ### _Azure Traffic Manager_  
   
-A nossa webapp tem um alcance global, dai termos de usar um  traffic manager para distribuir os utilizadores dependendo da sua localização no globo.  
+A nossa webapp tem um alcance global, dai termos de usar um  traffic manager para distribuir os utilizadores dependendo da sua localização no globo. Assim consegue-se configurar os endpoints, estes sendos os resources associados aos IPs das vnets. E associar o domain ao DNS deste manager.    
   
+### Arquitectura proposta
 
+(https://imgur.com/a/sJT2kjh)  
+  
