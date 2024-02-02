@@ -32,5 +32,5 @@ A nossa webapp tem um alcance global, dai termos de usar um  traffic manager par
   
 ### Arquitectura proposta
 
-(https://imgur.com/a/sJT2kjh)  
+![arquitectura proposta](https://imgur.com/a/sJT2kjh)  
   
