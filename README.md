@@ -37,4 +37,6 @@ A nossa webapp tem um alcance global, dai termos de usar um  traffic manager par
 ## Preparação  
   
 Para dar deployment na infraestructura proposta vai-se usar terraform. O exemplo criado está referenciado [aqui](https://github.com/jeralves/ten21-technical/blob/master/main.tf).
-  
+ 
+## Migração  
+  Para fazer a migração dos dados para o _Azure SQL Database_ é seguir estes [passos](https://learn.microsoft.com/en-us/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide?view=azuresql#migrate-using-the-azure-sql-migration-extension-for-azure-data-studio)
