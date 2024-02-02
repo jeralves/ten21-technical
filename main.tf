@@ -19,7 +19,7 @@ variable "prefix" {}
 variable "regions" {}
 
 # Resource groups
-resource "azresource_group" {
+resource "azresource_group" "rg"{
 	count = length(var.regions)
 	name  = "${var.prefix}-${var.regions[count.index]}-resoursegroup"
 	location = var.regions[count.index]
@@ -29,4 +29,8 @@ resource "azresource_group" {
 resource "az_vnets" {
 	count = length(var.regions)
 	name  = "${var.prefix}-${var.regions[count.index]}-vnet"
-	resource_group_name = "${az"
+	resource_group_name = "azresource_group.rg[count.index].name"
+	location            = "azresource_group.rg[count.index].location"
+	address_space       = ["10.0.0.0/16"]
+}
+
