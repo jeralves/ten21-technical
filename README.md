@@ -23,7 +23,7 @@ Precisamos de saber se existe algum blocker de migração ou problemas de compat
 Presumindo que possa ser uma image docker, e esta estar no Docker Hub, pode-se iniciar o serviço _Web App_ , e em _Instance Details_ usar essa mesma imagem. No entanto como a webapp tem milhões de acessos é sensato usar _Kubernetes_, ter várias instâncias da webapp com capacidades de load balancing.  
   
 ### Virtual Network
-
+  
 Para a kubernets funcionar como intencionado é necessário estar sobre a mesma vnet, e como é uma webapp global, podemos usar as várias regiões com global peering.  
   
 ### _Azure Traffic Manager_  
@@ -33,4 +33,8 @@ A nossa webapp tem um alcance global, dai termos de usar um  traffic manager par
 ### Arquitectura proposta
 
 ![arquitectura proposta](https://i.imgur.com/IDvwVdl.png)  
+  
+## Preparação  
+  
+Para dar deployment na infrasctura proposta vai-se usar terraform. O exemplo criado está referenciado [aqui](https://github.com/jeralves/ten21-technical/blob/master/main.tf).
   
