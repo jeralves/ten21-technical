@@ -26,4 +26,8 @@ Presumindo que possa ser uma image docker, e esta estar no Docker Hub, pode-se i
 
 Para a kubernets funcionar como intencionado é necessário estar sobre a mesma vnet, e como é uma webapp global, podemos usar as várias regiões com global peering.  
   
+### _Azure Traffic Manager_  
+  
+A nossa webapp tem um alcance global, dai termos de usar um  traffic manager para distribuir os utilizadores dependendo da sua localização no globo.  
+  
 
