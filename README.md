@@ -36,5 +36,5 @@ A nossa webapp tem um alcance global, dai termos de usar um  traffic manager par
   
 ## Preparação  
   
-Para dar deployment na infrasctura proposta vai-se usar terraform. O exemplo criado está referenciado [aqui](https://github.com/jeralves/ten21-technical/blob/master/main.tf).
+Para dar deployment na infraestructura proposta vai-se usar terraform. O exemplo criado está referenciado [aqui](https://github.com/jeralves/ten21-technical/blob/master/main.tf).
   

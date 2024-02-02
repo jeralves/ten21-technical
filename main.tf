@@ -13,3 +13,20 @@ terraform {
 provider "azurerm" {
   features {}
 }
+
+# Import vars from variables.tf
+variable "prefix" {}
+variable "regions" {}
+
+# Resource groups
+resource "azresource_group" {
+	count = length(var.regions)
+	name  = "${var.prefix}-${var.regions[count.index]}-resoursegroup"
+	location = var.regions[count.index]
+}
+
+# Virtual networks
+resource "az_vnets" {
+	count = length(var.regions)
+	name  = "${var.prefix}-${var.regions[count.index]}-vnet"
+	resource_group_name = "${az"
